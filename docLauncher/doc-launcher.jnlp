@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0+" 
-        codebase="http://localhost:4503/content/dam/research"
-        href="doc-launcher.jnlp">
+        codebase="http://localhost:4503"
+        href="/content/dam/wmrsi/code/doc-launcher.jnlp">
     <information>
         <title>Doc Launcher Demo</title>
         <vendor>AKD</vendor>
@@ -12,11 +12,13 @@
     <resources>
         <!-- Application Resources -->
         <j2se version="1.8+" />
-        <jar href="doc-launcher.jar" main="true" />
+        <jar href="/content/dam/wmrsi/code/doc-launcher-1.0.jar" main="true" />
     </resources>
     <application-desc
          name="Doc Launcher Application"
          main-class="com.doc.launcher.core.DocLauncher">
+         <argument>c:\data\demo.pdf</argument>
      </application-desc>
      <update check="background"/>
+     <property name="jnlp.deleteJnlpFileOnExit" value="true"/>
 </jnlp>
